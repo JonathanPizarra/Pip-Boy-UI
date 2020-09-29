@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Jonathan Pizarra">
+    <link rel="stylesheet" href="pip.css">
+    <title>The Pip Boy Experience - Pip Boy 3000 Mark IV UI</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav id="main-nav">
+        <ul class="item-list">
+          <li class="active"><a href="#" class="stat" data-footer="stat-footer">stat</a></li>
+          <li><a href="#" class="inv" data-footer="inv-footer">inv</a></li>
+          <li><a href="#" class="data" data-footer="data-footer">data</a></li>
+          <li><a href="#" class="map" data-footer="map-footer">map</a></li>
+          <li><a href="#" class="radio" data-footer="radio-footer">radio</a></li>
+        </ul>
+      </nav>
+
+      <div id="sub-navs">
+        <nav class="sub-nav stat-nav visible">
+          <ul>
+            <li><a href="#" class="status" data-target="status-section">status</a></li>
+            <li><a href="#" class="special" data-target="special-section">special</a> </li>
+            <li> <a href="#" class="perks" data-target="perks-section">perks</a> </li>
+          </ul>
+        </nav>
+
+        <nav class="sub-nav inv-nav invisible">
+          <ul>
+            <li><a href="#" class="weapons" data-target="weapons-section" data-footer=".gun-footer">weapons</a></li>
+            <li><a href="#" class="apparel" data-target="apparel-section" data-footer=".helmet-footer">apparel</a> </li>
+            <li><a href="#" class="aid" data-target="aid-section" data-footer=".hp-footer">aid</a> </li>
+            <li><a href="#" class="misc" data-target="misc-section" data-footer=".empty-footer">misc</a> </li>
+            <li><a href="#" class="junk" data-target="junk-section" data-footer=".empty-footer">junk</a> </li>
+            <li><a href="#" class="mods" data-target="mods-section" data-footer=".empty-footer">mods</a> </li>
+            <li><a href="#" class="ammo" data-target="ammo-section" data-footer=".empty-footer">ammo</a> </li>
+          </ul>
+        </nav>
+
+        <nav class="sub-nav data-nav invisible">
+          <ul>
+            <li><a href="#" class="quests" data-target="quests-section">quests</a></li>
+            <li><a href="#" class="workshop" data-target="workshop-section">workshop</a> </li>
+            <li> <a href="#" class="stats" data-target="stats-section">stats</a> </li>
+          </ul>
+        </nav>
+
+        <nav class="sub-nav map-nav invisible">
+          <ul>
+            <li> <a href="#" data-target="map-section"></a> </li>
+          </ul>
+        </nav>
+
+        <nav class="sub-nav radio-nav invisible">
+          <ul>
+            <li> <a href="#" data-target="radio-section"></a> </li>
+          </ul>
+        </nav>
+
+      </div>
+
+      <section class="sub-section status-section">
+
+        <div class="human">
+          <div class="img-container">
+            <img id="pip-boy-image" src="./images/human_walk1.png" alt="">
+          </div>
+          <div class="bars bar-top"></div>
+          <div class="bars bar-bottom"></div>
+        </div>
+
+        <div class="stat-icons">
+
+          <div class="gun-container wide">
+            <img id="gun" src="./images/gun4.png" alt="">
+          </div>
+
+          <div class="crosshairs-container thin">
+            <img src="./images/crosshairs1.png" alt="x">
+            <span>18</span>
+          </div>
+
+          <div class="empty"></div>
+
+          <div class="helmet-container wide">
+            <img src="./images/helmet1.png" alt="h">
+          </div>
+
+          <div class="armor-container thin">
+            <img src="./images/armor1.png" alt="a">
+            <span>10</span>
+          </div>
+
+          <div class="bolt-container thin">
+            <img src="./images/bolt1.png" alt="b">
+            <span>20</span>
+          </div>
+
+          <div class="radiation-container thin">
+            <img src="./images/radioactive1.png" alt="r">
+            <span>10</span>
+          </div>
+
+
+        </div>
+        <div class="stimpak-and-radaway">
+          <div class="stimpak">
+            STIMPAK(0)
+          </div>
+          <div class="radaway">
+            RADAWAY(0)
+          </div>
+        </div>
+      </section>
+
+      <section class="sub-section special-section invisible">
+        <div class="attribs-container">
+          <div class="attrib strength">
+            <span>Strength</span>
+            <span>4</span>
+          </div>
+          <div class="attrib perception">
+            <span>Perception</span>
+            <span>8</span>
+          </div>
+          <div class="attrib endurance">
+            <span>Endurance</span>
+            <span>3</span>
+          </div>
+          <div class="attrib charisma">
+            <span>Charisma</span>
+            <span>5</span>
+          </div>
+          <div class="attrib intelligence">
+            <span>Intelligence</span>
+            <span>2</span>
+          </div>
+          <div class="attrib agility">
+            <span>Agility</span>
+            <span>3</span>
+          </div>
+          <div class="attrib luck">
+            <span>Luck</span>
+            <span>3</span>
+          </div>
+        </div>
+
+        <div class="attrib-description">
+          <div class="attrib-img-container">
+            <img src="./images/human_walk1.png" alt="pipboy">
+          </div>
+          <div class="attrib-text">
+            <p>Strength is a measure of your raw physical power. It affects how much you can carry, and the damage of all melee attacks.</p>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="sub-section perks-section invisible">
+        <div class="perks-container">
+          <div class="perk perk1">
+            Animal Friend
+          </div>
+          <div class="perk perk2">
+            Big Leagues
+          </div>
+          <div class="perk perk3">
+            Bloody Mess
+          </div>
+          <div class="perk perk4">
+            Pickpocket
+          </div>
+          <div class="perk perk5">
+            Sniper
+          </div>
+
+          <div class="ranks-container">
+            <button class="rank-button prev-rank">PREV RANK</button>
+            <button class="rank-button next-rank">NEXT RANK</button>
+          </div>
+        </div>
+
+        <div class="perks-description">
+          <div class="perks-img-container">
+            <img src="./images/human_walk1.png" alt="">
+          </div>
+          <div class="star-container"></div>
+          <p id="rank-description">Commune with beasts! With your gun, aim at any animal below your level and gain a chance to pacify it.</p>
+        </div>
+
+      </section>
+
+      <section class="sub-section weapons-section invisible">
+        <!-- used jquery to add weapons and stats-->
+        <div class="hide-scrollbar">
+          <div class="weapons-container"></div>
+        </div>
+
+        <div class="weapon-buttons">
+          <button>DROP</button>
+          <button>FAV</button>
+          <button>SORT</button>
+        </div>
+
+        <!-- I also wanted to use jquery on this one but it seems too complicated -->
+        <div class="weapon-stats weapon1 show-stats">
+          <div class=""> <span>Damage</span> <div class="stat-icon"> <img class="crosshairs-stat-icon" src="./images/crosshairs1.png" alt="c"> <span>18</span> </div> </div>
+          <div class=""> <div class="stat-icon"> <img  src="./images/bullet3.png" alt="b"> <span>10mm</span> </div> <span>120</span> </div>
+          <div class=""> <span>Fire Rate</span> <span>46</span> </div>
+          <div class=""> <span>Range</span> <span>83</span> </div>
+          <div class=""> <span>Accuracy</span> <span>60</span> </div>
+          <div class=""> <span>Weight</span> <span>3.5</span> </div>
+          <div class=""> <span>Value</span> <span>50</span> </div>
+        </div>
+
+        <div class="weapon-stats weapon2">
+          <div class=""> <span>Damage</span> <div class="stat-icon"> <img class="crosshairs-stat-icon" src="./images/crosshairs1.png" alt="c"> <span>28</span> </div> </div>
+          <div class=""> <span>Speed</span> <span>SLOW</span> </div>
+          <div class=""> <span>Weight</span> <span>3</span> </div>
+          <div class=""> <span>Value</span> <span>25</span> </div>
+        </div>
+
+        <div class="weapon-stats weapon3">
+          <div class=""> <span>Damage</span> <div class="stat-icon"> <img class="crosshairs-stat-icon" src="./images/crosshairs1.png" alt="c"> <span>468</span> </div> </div>
+          <div class=""> <div class="stat-icon"> <img  src="./images/bullet3.png" alt="b"> <span>Mini Nuke</span> </div> <span>2</span> </div>
+          <div class=""> <span>Fire Rate</span> <span>1</span> </div>
+          <div class=""> <span>Range</span> <span>117</span> </div>
+          <div class=""> <span>Accuracy</span> <span>63</span> </div>
+          <div class=""> <span>Weight</span> <span>30.7</span> </div>
+          <div class=""> <span>Value</span> <span>512</span> </div>
+        </div>
+
+        <div class="weapon-stats weapon4">
+          <div class=""> <span>Damage</span> <div class="stat-icon"> <img class="crosshairs-stat-icon" src="./images/crosshairs1.png" alt="c"> <span>101</span> </div> </div>
+          <div class=""> <span>Fire Rate</span> <span>0</span> </div>
+          <div class=""> <span>Range</span> <span>93</span> </div>
+          <div class=""> <span>Accuracy</span> <span>0</span> </div>
+          <div class=""> <span>Weight</span> <span>0.5</span> </div>
+          <div class=""> <span>Value</span> <span>50</span> </div>
+        </div>
+
+        <div class="weapon-stats weapon5">
+          <div class=""> <span>Damage</span> <div class="stat-icon"> <img class="crosshairs-stat-icon" src="./images/crosshairs1.png" alt="c"> <span>33</span> </div> </div>
+          <div class=""> <div class="stat-icon"> <img  src="./images/bullet3.png" alt="b"> <span>Cell</span> </div> <span>64</span> </div>
+          <div class=""> <span>Fire Rate</span> <span>6</span> </div>
+          <div class=""> <span>Range</span> <span>215</span> </div>
+          <div class=""> <span>Accuracy</span> <span>72</span> </div>
+          <div class=""> <span>Weight</span> <span>15.4</span> </div>
+          <div class=""> <span>Value</span> <span>73</span> </div>
+        </div>
+
+        <div class="weapon-stats weapon6">
+          <div class=""> <span>Damage</span> <div class="stat-icon"> <img class="crosshairs-stat-icon" src="./images/crosshairs1.png" alt="c"> <span>24</span> </div> </div>
+          <div class=""> <span>Speed</span> <span>MEDIUM</span> </div>
+          <div class=""> <span>Weight</span> <span>2</span> </div>
+          <div class=""> <span>Value</span> <span>25</span> </div>
+        </div>
+
+        <div class="weapon-stats weapon7">
+          <div class=""> <span>Damage</span> <div class="stat-icon"> <img class="crosshairs-stat-icon" src="./images/crosshairs1.png" alt="c"> <span>8</span> </div> </div>
+          <div class=""> <div class="stat-icon"> <img  src="./images/bullet3.png" alt="b"> <span>5mm</span> </div> <span>486</span> </div>
+          <div class=""> <span>Fire Rate</span> <span>272</span> </div>
+          <div class=""> <span>Range</span> <span>131</span> </div>
+          <div class=""> <span>Accuracy</span> <span>35</span> </div>
+          <div class=""> <span>Weight</span> <span>27.4</span> </div>
+          <div class=""> <span>Value</span> <span>382</span> </div>
+        </div>
+
+        <div class="weapon-stats weapon8">
+          <div class=""> <span>Damage</span> <div class="stat-icon"> <img class="crosshairs-stat-icon" src="./images/crosshairs1.png" alt="c"> <span>51</span> </div> </div>
+          <div class=""> <span>Fire Rate</span> <span>0</span> </div>
+          <div class=""> <span>Range</span> <span>93</span> </div>
+          <div class=""> <span>Accuracy</span> <span>0</span> </div>
+          <div class=""> <span>Weight</span> <span>0.5</span> </div>
+          <div class=""> <span>Value</span> <span>20</span> </div>
+        </div>
+
+        <div class="weapon-stats weapon9">
+          <div class=""> <span>Damage</span> <div class="stat-icon"> <img class="crosshairs-stat-icon" src="./images/crosshairs1.png" alt="c"> <span>35</span> </div> </div>
+          <div class=""> <div class="stat-icon"> <img  src="./images/bullet3.png" alt="b"> <span>.308</span> </div> <span>130</span> </div>
+          <div class=""> <span>Fire Rate</span> <span>2</span> </div>
+          <div class=""> <span>Range</span> <span>95</span> </div>
+          <div class=""> <span>Accuracy</span> <span>63</span> </div>
+          <div class=""> <span>Weight</span> <span>3.2</span> </div>
+          <div class=""> <span>Value</span> <span>30</span> </div>
+        </div>
+
+        <div class="weapon-stats weapon10">
+          <div class=""> <span>Damage</span> <div class="stat-icon"> <img class="crosshairs-stat-icon" src="./images/crosshairs1.png" alt="c"> <span>47</span> </div> </div>
+          <div class=""> <div class="stat-icon"> <img  src="./images/bullet3.png" alt="b"> <span>Shell</span> </div> <span>26</span> </div>
+          <div class=""> <span>Fire Rate</span> <span>26</span> </div>
+          <div class=""> <span>Range</span> <span>47</span> </div>
+          <div class=""> <span>Accuracy</span> <span>16</span> </div>
+          <div class=""> <span>Weight</span> <span>9</span> </div>
+          <div class=""> <span>Value</span> <span>39</span> </div>
+        </div>
+
+        <div class="arrow-icons">
+          <img src="./images/up1.png" alt="u">
+          <img src="./images/down1.png" alt="d">
+        </div>
+
+      </section>
+
+      <section class="sub-section apparel-section invisible">
+        <div class="hide-scrollbar">
+          <!-- use jquery here -->
+          <div class="apparel-container"> </div>
+        </div>
+
+        <div class="apparel-buttons">
+          <button>DROP</button>
+          <button>CYCLE DAMAGE</button>
+          <button>FAV</button>
+          <button>SORT</button>
+        </div>
+
+        <div class="apparel-stats apparel1 show-stats">
+          <div class="tall">
+            <span>DMG Resist</span>
+            <div class="resist-icons">
+              <div class=""> <img src="./images/armor1.png" alt="s"> <span>1</span> </div>
+              <div class=""> <img src="./images/bolt1.png" alt="b"> <span>3</span> </div>
+            </div>
+          </div>
+          <div class="">
+            <span>Weight</span> <span>2</span>
+          </div>
+          <div class="">
+            <span>Value</span> <span>8</span>
+          </div>
+        </div>
+
+        <div class="apparel-stats apparel2">
+          <div class="tall">
+            <span>DMG Resist</span>
+            <div class="resist-icons">
+              <div class=""> <img src="./images/armor1.png" alt="s"> <span>2</span> </div>
+              <div class=""> <img src="./images/bolt1.png" alt="b"> <span>3</span> </div>
+            </div>
+          </div>
+          <div class="">
+            <span>Weight</span> <span>2</span>
+          </div>
+          <div class="">
+            <span>Value</span> <span>8</span>
+          </div>
+        </div>
+
+        <div class="apparel-stats apparel3">
+          <div class="tall">
+            <span>DMG Resist</span>
+            <div class="resist-icons">
+              <div class=""> <img src="./images/armor1.png" alt="s"> <span>2</span> </div>
+              <div class=""> <img src="./images/bolt1.png" alt="b"> <span>5</span> </div>
+            </div>
+          </div>
+          <div class="">
+            <span>Weight</span> <span>2</span>
+          </div>
+          <div class="">
+            <span>Value</span> <span>19</span>
+          </div>
+        </div>
+
+        <div class="apparel-stats apparel4">
+          <div class="short">
+            <span>DMG Resist</span>
+            <div class="resist-icons">
+              <div class=""> <img src="./images/armor1.png" alt="s"> <span>3</span> </div>
+            </div>
+          </div>
+          <div class="">
+            <span>Weight</span> <span>5</span>
+          </div>
+          <div class="">
+            <span>Value</span> <span>51</span>
+          </div>
+        </div>
+
+        <div class="apparel-stats apparel5">
+          <div class="tall">
+            <span>DMG Resist</span>
+            <div class="resist-icons">
+              <div class=""> <img src="./images/armor1.png" alt="s"> <span>4</span> </div>
+              <div class=""> <img src="./images/bolt1.png" alt="b"> <span>2</span> </div>
+            </div>
+          </div>
+          <div class="">
+            <span>Weight</span> <span>7</span>
+          </div>
+          <div class="">
+            <span>Value</span> <span>18</span>
+          </div>
+        </div>
+
+        <div class="apparel-stats apparel6">
+          <div class="tall">
+            <span>DMG Resist</span>
+            <div class="resist-icons">
+              <div class=""> <img src="./images/armor1.png" alt="s"> <span>2</span> </div>
+              <div class=""> <img src="./images/bolt1.png" alt="b"> <span>2</span> </div>
+            </div>
+          </div>
+          <div class="">
+            <span>Weight</span> <span>3</span>
+          </div>
+          <div class="">
+            <span>Value</span> <span>8</span>
+          </div>
+        </div>
+
+        <div class="apparel-stats apparel7">
+          <div class="tall">
+            <span>DMG Resist</span>
+            <div class="resist-icons">
+              <div class=""> <img src="./images/armor1.png" alt="s"> <span>5</span> </div>
+              <div class=""> <img src="./images/radioactive1.png" alt="b"> <span>10</span> </div>
+            </div>
+          </div>
+          <div class="">
+            <span>Weight</span> <span>1</span>
+          </div>
+          <div class="">
+            <span>Value</span> <span>20
+
+
+
+            </span>
+          </div>
+        </div>
+
+        <div class="apparel-stats apparel8">
+          <div class="">
+            <span>Weight</span> <span>0</span>
+          </div>
+          <div class="">
+            <span>Value</span> <span>250</span>
+          </div>
+        </div>
+
+        <div class="apparel-stats apparel9">
+          <div class="">
+            <span>PER</span> <span>1</span>
+          </div>
+          <div class="">
+            <span>Weight</span> <span>0.3</span>
+          </div>
+          <div class="">
+            <span>Value</span> <span>10</span>
+          </div>
+        </div>
+
+        <div class="arrow-icons">
+          <img src="./images/up1.png" alt="u">
+          <img src="./images/down1.png" alt="d">
+        </div>
+
+      </section>
+
+      <section class="sub-section aid-section invisible">
+
+        <div class="hide-scrollbar">
+          <div class="aid-container">
+
+          </div>
+        </div>
+
+        <div class="aid-buttons">
+          <button>DROP</button>
+          <button>FAV</button>
+          <button>SORT</button>
+        </div>
+
+        <div class="arrow-icons">
+          <img src="./images/up1.png" alt="u">
+          <img src="./images/down1.png" alt="d">
+        </div>
+
+      </section>
+
+      <section class="sub-section misc-section invisible">
+        <div class="misc-container">
+          <div class="misc" data-target=".misc1">
+            Atomic Command
+          </div>
+          <div class="misc" data-target=".misc2">
+            Bobby Pin (21)
+          </div>
+        </div>
+        <div class="misc-buttons">
+          <button>DROP</button>
+          <button>SORT</button>
+        </div>
+
+        <div class="misc-stats misc1 show-stats">
+          <div class="">
+            <span>Weight</span> <span>0</span>
+          </div>
+
+          <div class="">
+            <span>Value</span> <span>300</span>
+          </div>
+        </div>
+
+        <div class="misc-stats misc2">
+          <div class="">
+            <span>Weight</span> <span>0</span>
+          </div>
+
+          <div class="">
+            <span>Value</span> <span>1</span>
+          </div>
+        </div>
+
+
+
+      </section>
+
+      <section class="sub-section junk-section invisible">
+
+        <div class="hide-scrollbar">
+          <div class="junk-container">
+
+          </div>
+        </div>
+
+        <div class="junk-buttons">
+          <button>DROP</button>
+          <button>COMPONENT VIEW</button>
+          <button>SORT</button>
+        </div>
+
+        <div class="junk-stats show-stats">
+          <div class="">
+            <span>Weight</span> <span>0.1</span>
+          </div>
+          <div class="">
+            <span>Value</span> <span>12</span>
+          </div>
+        </div>
+
+        <div class="arrow-icons">
+          <img src="./images/up1.png" alt="u">
+          <img src="./images/down1.png" alt="d">
+        </div>
+
+      </section>
+
+      <section class="sub-section mods-section invisible">
+        <div class="mods-buttons">
+          <button>DROP</button>
+          <button>SORT</button>
+        </div>
+      </section>
+
+      <section class="sub-section ammo-section invisible">
+        <div class="hide-scrollbar">
+          <div class="ammo-container">
+
+          </div>
+        </div>
+
+        <div class="ammo-buttons">
+          <button>DROP</button>
+          <button>SORT</button>
+        </div>
+
+        <div class="ammo-stats show-stats">
+          <div class="">
+            <span>Weight</span> <span>0</span>
+          </div>
+          <div class="">
+            <span>Value</span> <span>100</span>
+          </div>
+        </div>
+
+        <div class="arrow-icons">
+          <img src="./images/up1.png" alt="u">
+          <img src="./images/down1.png" alt="d">
+        </div>
+
+      </section>
+
+      <section class="sub-section quests-section invisible">
+        <div class="hide-scrollbar">
+          <div class="quest-container">
+
+          </div>
+        </div>
+
+        <div class="right-side">
+          <p>I triggered the countdown to launch teh nuke! I need to get out of the sub bay! Why am I reading this?! </p>
+          <div class="quest-description show-stats">
+            <div class="header">
+              Escape the Nucleus
+            </div>
+            <div class="header-text">
+              <img src="./images/check1.png" alt="c">
+              <p>(Optional) Speak to the High Confessor about the Nuclear Launch Key</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="arrow-icons">
+          <img src="./images/up1.png" alt="u">
+          <img src="./images/down1.png" alt="d">
+        </div>
+
+      </section>
+
+      <section class="sub-section workshop-section invisible">
+        <div class="hide-scrollbar">
+          <div class="workshop-container">
+
+          </div>
+        </div>
+        <div class="workshop-stats show-stats">
+          <div class="">
+            <img src="./images/human1.png" alt="p"> <span class="text">People</span> <span class="value">8</span>
+          </div>
+          <div class="">
+            <img src="./images/fork1.png" alt="f"> <span class="text">Food</span> <span class="value">19</span>
+          </div>
+          <div class="">
+            <img src="./images/drop1.png" alt="w"> <span class="text">Water</span> <span class="value">15</span>
+          </div>
+          <div class="">
+            <img src="./images/bolt1.png" alt="p"> <span class="text">Power</span> <span class="value">13</span>
+          </div>
+          <div class="">
+            <img src="./images/armor1.png" alt="d"> <span class="text">Defense</span> <span class="value">33</span>
+          </div>
+          <div class="">
+            <img src="./images/bed1.png" alt="b"> <span class="text">Beds</span> <span class="value">24</span>
+          </div>
+          <div class="">
+            <img src="./images/smile1.png" alt="h"> <span class="text">Happiness</span> <span class="value">70</span>
+          </div>
+        </div>
+
+        <div class="arrow-icons">
+          <img src="./images/up1.png" alt="u">
+          <img src="./images/down1.png" alt="d">
+        </div>
+
+      </section>
+
+      <section class="sub-section stats-section invisible">
+        <div class="stats-container">
+          <div class="selected-stat">
+            General
+          </div>
+          <div class="">
+            Quest
+          </div>
+          <div class="">
+            Combat
+          </div>
+          <div class="">
+            Crafting
+          </div>
+          <div class="">
+            Crime
+          </div>
+        </div>
+        <!-- use jquery to populate -->
+        <div class="hide-scrollbar">
+          <div class="stats-stats show-stats">
+
+          </div>
+        </div>
+
+      </section>
+
+      <section class="sub-section map-section invisible">
+        <img src="./images/map.webp" alt="map">
+      </section>
+
+      <section class="sub-section radio-section invisible">
+        <div class="radio-container">
+          <div class="radio selected-stat">
+            Classical Radio
+          </div>
+          <div class="radio">
+            Diamond City Radio
+          </div>
+        </div>
+
+        <div class="radio-image">
+          <img src="./images/wave_classical.gif" alt="">
+        </div>
+
+      </section>
+
+<!-- footers  -->
+      <footer class="pip-footer stat-footer visible">
+        <div class="hp">
+          HP 115/115
+        </div>
+        <div class="level">
+          <span>LEVEL 6</span>
+          <div class="level-bar">
+            <div class="level-indicator"> </div>
+          </div>
+        </div>
+        <div class="ap">
+          AP 90/90
+        </div>
+      </footer>
+
+      <footer class="pip-footer inv-footer invisible">
+        <div class="bag">
+          <img src="./images/bag1.png" alt="b">
+          <span>133/240</span>
+        </div>
+        <div class="coins">
+          <img src="./images/coin1.png" alt="c">
+          <span>576</span>
+        </div>
+
+        <div class="footer-bar gun-footer visible">
+          <img src="./images/gun4.png" alt="gun">
+          <img src="./images/crosshairs1.png" alt="coin">
+          <span>18</span>
+        </div>
+
+        <div class="footer-bar helmet-footer invisible">
+          <img src="./images/helmet1.png" alt="h">
+          <div class="">
+            <img src="./images/armor1.png" alt="s"> <span>10</span>
+          </div>
+          <div class="">
+            <img src="./images/bolt1.png" alt="b"> <span>20</span>
+          </div>
+          <div class="">
+            <img src="./images/radioactive1.png" alt="r"> <span>10</span>
+          </div>
+        </div>
+
+        <div class="footer-bar hp-footer invisible">
+          <span>HP</span>
+          <div class="">
+
+          </div>
+        </div>
+
+        <div class="footer-bar empty-footer invisible">
+
+        </div>
+
+      </footer>
+
+      <footer class="pip-footer data-footer invisible">
+        <div class="coord">
+          10.23.2287
+        </div>
+        <div class="time">
+          get current time
+        </div>
+        <div class="empty-footer">
+
+        </div>
+      </footer>
+
+      <footer class="pip-footer map-footer invisible">
+        <div class="coord">
+          10.23.2287
+        </div>
+        <div class="time">
+          get current time
+        </div>
+        <div class="local-map">
+          <div class="">
+            LOCAL MAP
+          </div>
+        </div>
+      </footer>
+
+      <footer class="pip-footer radio-footer invisible">
+        <div class="empty-radio">
+
+        </div>
+      </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"> </script>
+
+
+    <script src="pipboy_script.js">
+
+    </script>
+  </body>
+</html>

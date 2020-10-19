@@ -292,7 +292,8 @@ button{
   padding:0 12px;
 }
 
-.perks-container .perk, .weapons-container .weapon, .apparel-container .apparel, .misc-container .misc, .junk-container .junk, .ammo-container .ammo, .aid-container .aid, .quest-container .quest, .workshop-container .workshop{
+/* shortened this one.  */
+.perks-container .perk, .item-container .sub-item{
   width:80%;
   height: 45px;
   display: flex;
@@ -305,13 +306,13 @@ button{
   cursor:pointer;
 }
 
-.weapons-container > .weapon, .apparel-container > .apparel, .misc-container > .misc, .junk-container > .junk, .ammo-container > .ammo, .aid-container > .aid, .quest-container > .quest, .workshop-container > .workshop{
+.item-container > .sub-item{
   width:90%;
   padding-left:25px;
   position: relative;
 }
 
-.weapons-container > .weapon:hover, .apparel-container > .apparel:hover, .misc-container > .misc:hover, .junk-container > .junk:hover, .ammo-container > .ammo:hover, .aid-container > .aid:hover, .quest-container > .quest:hover, .workshop-container > .workshop:hover{
+.item-container > .sub-item:hover{
   color:#272b23;
   background: #14fe17;
 }
@@ -337,7 +338,7 @@ button{
   overflow: hidden;
 }
 
-.weapons-container, .apparel-container, .junk-container, .ammo-container, .aid-container, .quest-container, .workshop-container, .stats-stats{
+.item-container .stats-stats{
   overflow: scroll;
   width:106%;
   height:106%;

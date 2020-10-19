@@ -102,13 +102,13 @@ $(document).ready(function(){
 // =====================================================================================
   let quest_list = ["The Way Life Should Be", "Cleansing the Land", "Hull Breach", "Blood Tide", "Living on the Edge", "Explore Vault 88", "A Model Citizen", "Mercer Safehouse", "The Silver Shroud", "Ghoul Problem at Finch Farm", "Defend Abernathy Farm", "Cambridge Polymer Labs", "Synth Retention", "Underground Undercover", "Special Delivery", "The Lost Patrol", "Shadow of Steel", "Semper Invicta"];
   quest_list.forEach((item, i) => {
-    $(".quest-container").append("<div class='quest'>" + item + "</div>");
+    $(".quest-container").append("<div class='sub-item quest'>" + item + "</div>");
   });
 
 // =====================================================================================
     let workshop_list = ["County Crossing", "Graygarden", "Greentop Nursery", "Oberland Station", "Outpost Zimonja", 'Red Rocket Truck Stop', "Sanctuary Hills", "Starlight Drive-In", "Tenpines Bluff"];
     workshop_list.forEach((item, i) => {
-      $(".workshop-container").append("<div class='workshop'>" + item + "</div>");
+      $(".workshop-container").append("<div class='sub-item workshop'>" + item + "</div>");
     });
 
     rand = ()=>{
@@ -131,21 +131,21 @@ $(document).ready(function(){
 // =====================================================================================
   let aid_list = ["Corn", "Food Paste (2)", "Lad's Life", "Programmer's Digest", "QUICK SAVE", "Rad-X (7)", "RadAway (5)", "Radscorpion Meat (2)", "Stimpak" ];
   aid_list.forEach((item, i) => {
-    $(".aid-container").append("<div class='aid'>" + item + "</div>")
+    $(".aid-container").append("<div class='sub-item aid'>" + item + "</div>")
   });
 
 
 // =====================================================================================
     let ammo_list = [".308 Round (232)", ".38 Round (1792)", ".44 Round (245)", ".45 Round (552)", ".50 Caliber (67)", "10mm Round (655)", "5.56 Round (563)", "5mm Round (1719)", "Fusion Cell (64)", "Mini Nuke (2)", "Shotgun Shell (26)"];
     ammo_list.forEach((item, i) => {
-      $(".ammo-container").append("<div class='ammo'>" + item + "</div>");
+      $(".ammo-container").append("<div class='sub-item ammo'>" + item + "</div>");
     });
 
 
 // =====================================================================================
   let junk_list = ["Baseball", "Desk Fan", "Duck Tape (2)", "Fancy Hairbrush (2)", "Ladle", "Oven Mitt", "Paint Can", "Toy Rocketship", "Wonderglue"];
   junk_list.forEach((item, i) => {
-    $(".junk-container").append("<div class='junk'>" + item + "</div>");
+    $(".junk-container").append("<div class='sub-item junk'>" + item + "</div>");
   });
 
 // ===================================================================================
@@ -158,7 +158,7 @@ $(document).ready(function(){
 // ===================================================================================
   let apparel_list = ["Leather Left Arm", "Leather Right Arm", "Leather Right Leg", "Mining Helmet", "Raider Chest Piece", "Raider Left Leg", "Vault 111 Jumpsuit", "Wedding Ring", "Welding Goggles"];
   apparel_list.forEach((item, i) => {
-    $(".apparel-container").append("<div class='apparel use-weapon' data-target='.apparel" + (i+1) + "'>" + item + "</div>");
+    $(".apparel-container").append("<div class='sub-item apparel use-weapon' data-target='.apparel" + (i+1) + "'>" + item + "</div>");
   });
 
   let apparels = $(".apparel-container .apparel");
@@ -178,7 +178,7 @@ $(document).ready(function(){
 // ====================================================================================
   let weapons_list = [ "10mm Pistol", "Baseball Bat", "Fat Man", "Fragmentation Mine (6)", "Laser Musket", "Machete", "Minigun", "Molotov Cocktail (3)", "Pipe Bolt-Action Pistol", "Short Double-Barrel Shotgun"];
   weapons_list.forEach((item, i) => {
-    $(".weapons-container").append("<div class='weapon"  + (i==0? " use-weapon" : "") +  "' data-target='.weapon" + (i+1) + "'>" + item + "</div>");
+    $(".weapons-container").append("<div class='sub-item weapon"  + (i==0? " use-weapon" : "") +  "' data-target='.weapon" + (i+1) + "'>" + item + "</div>");
   });
 
   let weapons = $(".weapons-container .weapon");

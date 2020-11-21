@@ -338,7 +338,7 @@ button{
   overflow: hidden;
 }
 
-.item-container .stats-stats{
+.item-container, .stats-stats{
   overflow: scroll;
   width:106%;
   height:106%;

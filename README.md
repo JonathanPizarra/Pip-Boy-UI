@@ -6,3 +6,4 @@ The data used in stats are random while the others are from screenshots I have s
 I haven't played the game.
 
 A project based on a web development course I took in Udemy.
+Course: https://www.udemy.com/share/101WvcAksfd15aTXw=/
